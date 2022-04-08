@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  border-radius: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family, sans-serif);
+  font-weight: 400;
+  background-color: var(--main-bg-color);
+
+  &.body-locked {
+    overflow: hidden;
+  }
+
+  @extend .main-scroll;
+}
+
+footer {
+  margin-top: auto;
+}
+
+::-webkit-scrollbar { /* 1 - скроллбар */
+  width: var(--main-scrollbar-width);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
